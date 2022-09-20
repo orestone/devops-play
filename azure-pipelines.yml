@@ -16,7 +16,14 @@ steps:
   displayName: '1. xxx'
 
 - task: PowerShell@2
+  displayName: '2. xxx multiline'
   inputs:
     targetType: inline
-    script:  dir | Out-Host  
-  displayName: '2. xxx'
+    script: |
+      dir | Out-Host
+
+- task: PowerShell@2
+  displayName: '3. xxx'
+  inputs:
+      targetType: inline
+      script:  dir | Out-Host  
