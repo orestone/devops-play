@@ -16,14 +16,15 @@ steps:
   displayName: '1. xxx'
 
 - task: PowerShell@2
-  displayName: '2. xxx multiline'
+  displayName: '2. xxx multiline plus version'
   inputs:
     targetType: inline
     script: |
       dir | Out-Host
+      $PSVersionTable.PSVersion
 
 - task: PowerShell@2
   displayName: '3. xxx'
   inputs:
       targetType: inline
-      script:  dir | Out-Host  
+      script:  dir | Out-Host
